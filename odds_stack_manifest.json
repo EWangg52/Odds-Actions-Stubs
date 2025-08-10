@@ -1,14 +1,12 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Odds Stack \u2014 The Odds API (Only)",
+  "name_for_human": "Odds Stack — The Odds API (Only)",
   "name_for_model": "odds_stack",
   "description_for_model": "Unified access to The Odds API (sharp odds + per-event player props).",
-  "auth": {
-    "type": "none"
-  },
+  "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://raw.githubusercontent.com/EWangg52/odds-actions-stubs/main/odds_stack.openapi.yaml",
+    "url": "https://raw.githubusercontent.com/EWangg52/Odds-Actions-Stubs/main/odds_stack.openapi.yaml",
     "is_user_authenticated": false
   }
 }
