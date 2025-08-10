@@ -1,0 +1,14 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Odds Stack (Free)",
+  "name_for_model": "odds_stack",
+  "description_for_model": "Unified access to The Odds API (sharp odds + per-event props) and Prop-Odds (props).",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://YOUR_GH_USERNAME.github.io/odds-actions-stubs/odds_stack.openapi.yaml",
+    "is_user_authenticated": false
+  }
+}
