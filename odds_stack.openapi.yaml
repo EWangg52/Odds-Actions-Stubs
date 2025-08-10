@@ -1,12 +1,13 @@
 openapi: 3.0.3
 info:
   title: Odds Stack — The Odds API (Only)
-  version: 0.2.0
+  version: 0.2.1
 servers:
   - url: https://api.the-odds-api.com
 paths:
   /v4/sports:
     get:
+      operationId: listSports
       summary: List in-season sports
       parameters:
         - in: query
@@ -17,6 +18,7 @@ paths:
         "200": { description: OK }
   /v4/sports/{sport}/odds:
     get:
+      operationId: getSportOdds
       summary: Featured markets for live/upcoming events
       parameters:
         - in: path
@@ -47,6 +49,7 @@ paths:
         "200": { description: OK }
   /v4/sports/{sport}/events/{eventId}/odds:
     get:
+      operationId: getEventOdds
       summary: Odds for a single event, incl. player props via `markets`
       parameters:
         - in: path
