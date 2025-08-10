@@ -6,7 +6,8 @@
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://raw.githubusercontent.com/EWangg52/Odds-Actions-Stubs/main/odds_stack.openapi.json",
+    "url": "https://cdn.jsdelivr.net/gh/EWangg52/Odds-Actions-Stubs@main/odds_stack.openapi.json
+",
     "is_user_authenticated": false
   }
 }
