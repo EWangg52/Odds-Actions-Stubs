@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Odds Stack — The Odds API (Only)
+  version: 0.2.0
+servers:
+  - url: https://api.the-odds-api.com
+paths:
+  /v4/sports:
+    get:
+      summary: List in-season sports
+      parameters:
+        - in: query
+          name: apiKey
+          required: true
+          schema: { type: string }
+      responses:
+        "200": { description: OK }
+  /v4/sports/{sport}/odds:
+    get:
+      summary: Featured markets for live/upcoming events
+      parameters:
+        - in: path
+          name: sport
+          required: true
+          schema: { type: string, example: baseball_mlb }
+        - in: query
+          name: regions
+          required: true
+          schema: { type: string, example: us }
+        - in: query
+          name: markets
+          required: true
+          schema: { type: string, example: h2h,spreads,totals }
+        - in: query
+          name: oddsFormat
+          required: false
+          schema: { type: string, example: american }
+        - in: query
+          name: dateFormat
+          required: false
+          schema: { type: string, example: unix }
+        - in: query
+          name: apiKey
+          required: true
+          schema: { type: string }
+      responses:
+        "200": { description: OK }
+  /v4/sports/{sport}/events/{eventId}/odds:
+    get:
+      summary: Odds for a single event, incl. player props via `markets`
+      parameters:
+        - in: path
+          name: sport
+          required: true
+          schema: { type: string, example: baseball_mlb }
+        - in: path
+          name: eventId
+          required: true
+          schema: { type: string }
+        - in: query
+          name: markets
+          required: true
+          schema: { type: string, example: player_total_bases }
+        - in: query
+          name: regions
+          required: true
+          schema: { type: string, example: us }
+        - in: query
+          name: oddsFormat
+          required: false
+          schema: { type: string, example: american }
+        - in: query
+          name: apiKey
+          required: true
+          schema: { type: string }
+      responses:
+        "200": { description: OK }
